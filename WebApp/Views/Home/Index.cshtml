@@ -1,0 +1,93 @@
+﻿@using DAL.App
+@using Domain
+@model IEnumerable<Worker>
+
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="~/css/main.css" asp-append-version="true">
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
+
+    <title>Index</title>
+</head>
+<body>
+            <div class="container-table100">
+                <div class="wrap-table100">
+
+                    <div class="table100 ver5 m-b-110">
+                        <form asp-action="Index" name="sortOrder" value="asc" method="get">
+                            @if (Model.Count() > 0)
+                             {
+                        <div class="table100-head">
+
+                            <table>
+                                <thead>
+                                    <tr class="row100 head">
+                                        <th class="column1"><button name="filter" value="firstName @ViewBag.Sort">FirstName</button></th>
+
+                                        <th class="column2"><button name="filter" value="lastName @ViewBag.Sort">LastName</button></th>
+
+                                        <th class="column3"><button name="filter" value="contractFrom @ViewBag.Sort" 
+                                                                    title="From what date worker is working here">From</button></th>
+
+                                        <th class="column4"><button name="filter" value="contractUntil @ViewBag.Sort"
+                                                                    title="Until what date worker contract is set. '-' means no end date is set">Until</button></th>
+
+                                        <th class="column5"><button name="filter" value="contractType @ViewBag.Sort" 
+                                                                    title="Contract type">Type</button></th>
+
+                                        <th class="column6"><button name="filter" value="department @ViewBag.Sort">Department</button></th>
+
+                                        <th class="column7"><button name="filter" value="position @ViewBag.Sort">Position</button></th>
+
+
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                              }
+                            @foreach (Worker worker in Model)
+                             {
+
+                        <div class="table100-body js-pscroll">
+                            <table>
+                                <tbody>
+                                    <tr class="row100 body">
+                                        <td class="column1">@worker.FirstName</td>
+
+                                        <td class="column2">@worker.LastName</td>
+
+                                        <td class="column3">@worker.ContractFrom.ToString("dd.MM.yyyy") </td>
+
+                                        <td class="column4">@worker.ContractUntilToString("dd.MM.yyyy") </td>
+
+                                        <td class="column5">@worker.WorkerContractType </td>
+
+                                        <td class="column6"><button name="department" value="@worker.WorkerDepartment.DepartmentName" 
+                                                                    title="Click here to get workers that are working in @worker.WorkerDepartment.DepartmentName">
+                                            @worker.WorkerDepartment.DepartmentName </button></td>
+
+                                        <td class="column7">@worker.WorkerPosition.PositionName </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                             }
+                      </form>
+                    </div>
+                </div>
+            </div>
+    
+</body>
+
+
+</html>

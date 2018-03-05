@@ -1,0 +1,18 @@
+ID,FirstName,LastName,ContractFrom,ContractUntil,Department,Position
+1001,Silvia,Maredei,19.04.2015,-,Business Management,Business Analyst
+1002,Olga,Tamm,26.04.2011,24.06.2017,HR,HR Operations
+1003,Aleksandr,Ivanov,03.08.2016,-,IT Department,Programmer Analyst
+1004,Vladimir,Petrov,13.11.2012,14.05.2018,IT Department,Program Administrator
+1005,Jelena,Smirnova,05.01.2017,-,Business Management,Business Analyst
+1006,Sergei,Kuznetsov,08.03.2016,15.06.2017,HR,HR Operations
+1007,Andrei,Saar,24.05.2016,23.08.2017,IT Department,Systems Architect
+1008,Anna,Ilves,17.07.2017,-,IT Department,Test Developer
+1009,Maria,Kõiv,14.12.2015,-,HR,HR Specialist
+1010,Andres,Lõhmus,09.07.2013,06.09.2015,IT Department,Data Processing Systems Analyst
+1011,Martin,Lember,08.09.2009,26.08.2018,Business Management,Program Coordinator
+1012,Igor,Raudsepp,04.10.2013,-,IT Department,Systems Architect
+1013,Tiina,Aru,07.09.2015,-,Administration,Executive Assistant
+1014,Katrin,Mäe,04.05.2018,-,Administration,Office Manager
+1015,Dmitri,Vassiljeva,04.04.2015,20.07.2018,Administration,Secretary
+1016,Viktor,Unt,06.09.2016,11.04.2017,IT Department,Test Developer
+1017,Anne,Mõttus,15.08.2013,-,Administration,Sales Manager
